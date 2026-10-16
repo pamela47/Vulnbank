@@ -1,5 +1,4 @@
 # Web Application Security Testing Portfolio
-
 ## About This Project
 
 This repository is my practical portfolio for developing and demonstrating my skills in web application security and penetration testing.
