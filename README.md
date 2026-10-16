@@ -1,94 +1,51 @@
-# VulnBank Web Application Security Assessment  
-**Consultant:** Pamela Batchato  
-**Date:** 28.03.2026  
+# Web Application Security Testing Portfolio
 
-This repository contains a redacted version of a web application security assessment performed on the fictional **VulnBank** platform.  
-The goal of this project is to demonstrate practical experience in:
+## About This Project
 
-- Web application penetration testing  
-- API security analysis  
-- Authentication and session testing  
-- Access control validation  
-- Vulnerability reporting and remediation  
+This repository is my practical portfolio for developing and demonstrating my skills in web application security and penetration testing.
 
-All sensitive client information has been removed.  
-This project is intended for portfolio and educational purposes.
+My areas of interest include application security testing, API security, authentication and session management, access control, vulnerability analysis, and remediation.
 
----
+## Areas of Focus
 
-## 🔍 Assessment Overview
+- Web application penetration testing
+- API security and HTTP request analysis
+- Authentication and session management
+- Access control testing
+- Input validation and injection vulnerabilities
+- Technical reporting and remediation recommendations
 
-The assessment followed a structured methodology aligned with OWASP Web Security Testing Guide (WSTG).  
-Testing focused on:
+## Practice Lab
 
-- Authentication & session management  
-- API request/response flows  
-- Access control enforcement  
-- Input validation  
-- Token handling  
-- Error handling & server responses  
+I am developing an independent practice lab using an intentionally vulnerable training application.
 
-The engagement simulated real-world attack scenarios in a controlled environment.
+The planned exercises will focus on:
 
----
+- Understanding application functionality and request flows
+- Testing authentication and authorisation controls
+- Investigating input-handling weaknesses
+- Collecting and documenting test evidence
+- Assessing security impact and recommending fixes
 
-## 🧭 Methodology
+I will add findings and supporting evidence as the exercises are completed and validated.
 
-The following phases were performed:
+## Methodology
 
-1. **Reconnaissance** – Understanding application structure and workflows  
-2. **Enumeration** – Mapping endpoints, parameters, and API behaviour  
-3. **Vulnerability Testing** – Targeted testing for OWASP Top 10 issues  
-4. **Exploitation** – Controlled validation of identified weaknesses  
-5. **Reporting** – Documentation of findings and remediation guidance  
+My practice work follows a structured approach informed by established web application security testing guidance.
 
-Detailed methodology notes are available in `/01-Overview/`.
+The process includes defining the authorised scope, understanding application behaviour, testing relevant security controls, validating observations, and documenting recommendations.
 
----
+## Tools
 
-## ⚠️ Key Findings
+Tools used in my learning and authorised testing may include Burp Suite, Postman, browser developer tools, and other application security testing utilities.
 
-### 1. Insecure JWT Handling (High)
-The application stored sensitive authorization data (e.g., `is_admin`) inside a client-controlled JWT cookie.  
-This allowed potential privilege escalation if the token was modified.
+Specific tools and results will be documented alongside the exercises in which they are used.
 
-### 2. Insecure Direct Object Reference – IDOR (High)
-The endpoint `/transactions/{account_number}` lacked ownership validation, allowing access to other users' financial data.
+## Responsible Testing
 
-### 3. Weak Authentication Enforcement (Medium)
-Requests missing authentication headers or cookies were still accepted, indicating inconsistent session validation.
+All practice testing will be performed only against applications and environments I am authorised to assess.
 
-### 4. SQL Injection in Authentication (Critical)
-Unsanitised input in the login form allowed SQL injection, enabling full authentication bypass.
+## Project Status
+This portfolio is a work in progress. I am developing practical web application security testing skills through authorised lab exercises and documenting my findings, evidence, and remediation recommendations.
+This portfolio is a work in progress. I will publish practical exercises, validated findings, evidence, and remediation guidance as I complete the work.
 
-Full write-ups for each vulnerability are available in `/02-Findings/`.
-
----
-
-## 🛠 Tools & Techniques Used
-
-- Burp Suite  
-- Postman  
-- JWT.io  
-- SQLMap (for validation only)  
-- Manual payload crafting  
-- OWASP Testing Guide  
-- HTTP request manipulation  
-- API enumeration  
-
----
-
-## 🛡 Remediation Summary
-
-- Enforce server-side validation for all authentication mechanisms  
-- Implement strict access control checks  
-- Use parameterised SQL queries  
-- Avoid storing authorization data in client-side tokens  
-- Validate object ownership before returning sensitive data  
-- Standardise authentication (header or cookie, not both)  
-
-Detailed remediation guidance is available in `/04-Remediation/`.
-
----
-
-## 📁 Repository Structure
