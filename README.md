@@ -45,6 +45,5 @@ Specific tools and results will be documented alongside the exercises in which t
 All practice testing will be performed only against applications and environments I am authorised to assess.
 
 ## Project Status
-This portfolio is a work in progress. I am developing practical web application security testing skills through authorised lab exercises and documenting my findings, evidence, and remediation recommendations.
 This portfolio is a work in progress. I will publish practical exercises, validated findings, evidence, and remediation guidance as I complete the work.
 
